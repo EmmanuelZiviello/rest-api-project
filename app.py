@@ -19,7 +19,7 @@ from resources.user import blp as UserBlueprint
 
 def create_app(db_url=None):
     app=Flask(__name__)
-    load_dotenv()
+    load_dotenv() #carica i valori di .env cosi che i comandi flask vadano sul db online con l'url nel file env
 
     app.config["PROPAGATE_EXCEPTIONS"]=True
     app.config["API_TITLE"]="Stores REST API"
